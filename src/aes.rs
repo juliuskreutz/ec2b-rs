@@ -1,3 +1,11 @@
+// Simple AES implementation with MHY quirks baked-in
+// Based on public domain library by Chris Hulbert <chris.hulbert@gmail.com>
+// References:
+// http://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+// http://en.wikipedia.org/wiki/Rijndael_key_schedule
+// http://en.wikipedia.org/wiki/Rijndael_mix_columns
+// http://en.wikipedia.org/wiki/Rijndael_S-box
+
 const SHIFT_ROWS_TABLE_INV: &[u8] = &[0, 13, 10, 7, 4, 1, 14, 11, 8, 5, 2, 15, 12, 9, 6, 3];
 
 const LOOKUP_SBOX_INV: &[u8] = &[
